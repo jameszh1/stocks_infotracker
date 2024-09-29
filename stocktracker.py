@@ -25,4 +25,6 @@ with open(filename, "w") as file:
 webbrowser.open(f"file://{os.path.realpath(filename)}")
 print(f"A detailed report for stock {choice} has been created")
 print(f"The current price of {choice} is ${data['Close'].iloc[0]}")
+time.sleep(1)
+os.remove(filename)
 
